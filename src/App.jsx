@@ -1,14 +1,25 @@
-import { useState } from 'react'
-import './App.css'
+import AboutMe from './components/AboutMe/AboutMe'
+import Contact from './components/Contact/Contact'
+import Expertise from './components/Expertise/Expertise'
+import Footer from './components/Footer/Footer'
+import Home from './components/Home/Home'
+import Navbar from './components/Navbar/Navbar'
+import Projects from './components/Projects/Projects'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1> Whereas disregard and contempt for human rights have resulted </h1>
-      <body>Whereas disregard and contempt for human rights have resulted</body>
-      <p>Whereas disregard and contempt for human rights have resulted</p>
+      <Navbar />
+
+      <main>
+        <Home />
+        <AboutMe />
+        <Expertise />
+        <Projects />
+        <Contact />
+      </main>
+
+      <Footer />
     </>
   )
 }

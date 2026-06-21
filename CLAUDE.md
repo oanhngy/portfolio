@@ -18,6 +18,9 @@ Personal portfolio website inspired by tamalsen.dev. Single-page app deployed to
 **Data approach:** All content lives in `src/data/` — never hardcoded in JSX.
 
 ---
+##  Guiding Principle
+Do not over-engineer. Every solution should be appropriate for an intern/fresher level and fit the scope of a personal portfolio site. Prefer simple and readable over clever and abstract. If a pattern would not appear in a junior developer's first real project, it dose not lebong here
+---
 
 ## Design Tokens
 
