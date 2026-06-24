@@ -5,9 +5,11 @@
     --bg-card: #141414;
     --bg-hover: #1c1c1c;
     /* 1.2 others */
-    --border: #222222;
+    --border: #888888;
+    --hidden: #414040;
     --accent: #08cb00;
-    --accent-subtle: #08cb0018;
+    --accent-subtle: #07cb0042;
+    --accent-shade: #047800da;
     --text: #f0f0f0;
     --text-muted: #6a6a6a;
 

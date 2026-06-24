@@ -1,5 +1,4 @@
 import AboutMe from './components/AboutMe/AboutMe'
-import Contact from './components/Contact/Contact'
 import Expertise from './components/Expertise/Expertise'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
@@ -16,7 +15,6 @@ function App() {
         <AboutMe />
         <Expertise />
         <Projects />
-        <Contact />
       </main>
 
       <Footer />

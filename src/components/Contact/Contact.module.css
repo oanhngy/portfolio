@@ -1,0 +1,43 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cta {
+    font-family: var(--font-body);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-3xl);
+    color: var(--text);
+}
+
+.email {
+    align-self: flex-start;
+    margin-top: var(--space-l);
+    font-family: var(--font-display);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-xl);
+    color: var(--text);
+    background-image: linear-gradient(var(--accent-shade), var(--accent-shade));
+    background-size: 100% 14px;
+    background-position: 0 85%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+.email:hover {
+    background-size: 428px 85%;
+}
+
+.socials {
+    margin-top: var(--space-m);
+    font-family: var(--font-display);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-xl);
+}
+
+.socials a:hover {
+    color: var(--accent-shade);
+}
