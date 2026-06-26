@@ -12,7 +12,7 @@
     font-family: var(--font-display);
     font-weight: var(--fw-bold);
     font-size: var(--fs-2xl);
-    color: var(--accent);
+    color: var(--text);
     cursor: pointer;
 }
 
