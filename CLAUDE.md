@@ -95,11 +95,11 @@ portfolio/
 ```
 App.jsx
 ├── Navbar.jsx          → NavLinks, HamburgerBtn
-├── Home.jsx            → StatusBadge, HeroTitle, HeroActions, TechTags
-├── AboutMe.jsx         → SectionTitle (reusable), Avatar, Bio, ToolsList
+├── Home.jsx            → HeroTitle, HeroActions
+├── AboutMe.jsx         → StatusBadge, SectionTitle (reusable), Bio, TechTags, ToolsList
 ├── Expertise.jsx       → SectionTitle, SkillCard
-├── Projects.jsx        → SectionTitle, FilterBar, ProjectGrid, ProjectCard
-├── Contact.jsx         → SectionTitle, SocialLinks, ContactForm (optional)
+├── Projects.jsx        → SectionTitle, ProjectGrid, ProjectCard
+├── Contact.jsx         → SectionTitle, SocialLinks
 └── Footer.jsx          → ScrollToTop
 ```
 
@@ -124,7 +124,7 @@ App.jsx
 - Verify no errors in browser
 
 ### Phase 3 — Build Components
-Order: Navbar → Home → About Me → Expertise → Projects → Contact → Footer
+Order: Navbar → Contact → Footer → Home → About Me → Skills → Projects
 
 ### Phase 4 — Polish
 - Scroll animations via IntersectionObserver
