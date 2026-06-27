@@ -1,0 +1,133 @@
+.section {
+    padding: var(--section-padding);
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: var(--container-padding);
+    display: flex;
+    gap: var(--space-2xl);
+    align-items: stretch;
+    min-height: 60vh;
+}
+
+.left {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+}
+
+.right {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: justify;
+}
+
+/* check dot có effect k */
+.badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    color: var(--accent);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.badge::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    flex-shrink: 0;
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {opacity: 1; box-shadow: 0 0 6px var(--accent); }
+    50% {opacity: 0.2; box-shadow: none; }
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.intro {
+    font-size: var(--fs-l);
+    color: var(--text);
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.bio {
+    font-size: var(--fs-base);
+    color: var(--text-shade);
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.tags {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: var(--space-l) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-base);
+}
+
+.tag {
+    text-align: center;
+    padding: var(--space-m) var(--space-l);
+    border: 1px solid var(--accent-shade);
+    border-radius: 100px;
+    color: var(--accent-shade);
+    font-weight: var(--fw-medium);
+    white-space: nowrap;
+}
+
+/* breakpoint */
+@media (max-width: 1024px) {
+    .container {
+        gap: var(--space-xl);
+    }
+
+    .left {
+        flex: 5;
+    }
+
+    .bio {
+        font-size: var(--fs-m);
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        max-width: 90%;
+        flex-direction: column;
+        gap: var(--space-l);
+    }
+
+    .intro {
+        font-size: var(--fs-base);
+        line-height: 1.4;
+    }
+
+    .bio {
+        line-height: 1.2;
+    }
+
+    .tags {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: var(--space-s) 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: var(--space-base);
+    }
+}
