@@ -8,9 +8,10 @@
     --border: #888888;
     --hidden: #414040;
     --accent: #08cb00;
-    --accent-subtle: #07cb0042;
+    --accent-subtle: #bfebbe;
     --accent-shade: #047800da;
     --text: #f0f0f0;
+    --text-shade: #a4a4a4;
     --text-muted: #6a6a6a;
 
     /* 2. TYPO */
@@ -25,6 +26,7 @@
     --fs-xl: 28px;
     --fs-2xl: 40px;
     --fs-3xl: 56px;
+    --fs-4xl: 72px;
     /* 2.3 font weight */
     --fw-regular: 400;
     --fw-medium: 500;
@@ -42,5 +44,6 @@
 
     /* 4. LAYOUT */
     --section-padding: 100px 0;
+    --container-padding: 40px 0;
     --max-width: 1100px;
 }

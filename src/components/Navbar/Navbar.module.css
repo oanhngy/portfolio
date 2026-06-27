@@ -39,7 +39,6 @@
     color: var(--accent-shade);
 }
 
-/* ẩn desktop, mobile only */
 .hamburger {
     display: none;
     font-size: var(--fs-xl);
@@ -57,18 +56,21 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        /* align-items: flex-end; */
         top: 64px;
         right: 24px;
-
-        /* background: var(--accent); */
         padding: 0px var(--space-base);
         gap: var(--space-m);
-        border: 1px solid var(--border);
+        /* border: 1px solid var(--border); */
         min-width: 140px;
     }
 
     .hamburger {
         display: block;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo {
+        font-size: var(--fs-xl);
     }
 }
