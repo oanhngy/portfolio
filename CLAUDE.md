@@ -22,29 +22,6 @@ Personal portfolio website inspired by tamalsen.dev. Single-page app deployed to
 Do not over-engineer. Every solution should be appropriate for an intern/fresher level and fit the scope of a personal portfolio site. Prefer simple and readable over clever and abstract. If a pattern would not appear in a junior developer's first real project, it dose not lebong here
 ---
 
-## Design Tokens
-
-```css
-:root {
-  --bg:              #0a0a0a;
-  --bg-card:         #141414;
-  --bg-hover:        #1c1c1c;
-  --border:          #222222;
-  --accent:          #08CB00;
-  --accent-subtle:   #08CB0018;
-  --text:            #F0F0F0;
-  --text-muted:      #555555;
-  --font-display:    'Space Grotesk', sans-serif;
-  --font-body:       'DM Sans', sans-serif;
-  --section-padding: 100px 0;
-  --max-width:       1100px;
-}
-```
-
-Fonts loaded via Google Fonts. Tokens defined in `src/styles/variables.css`, imported once in `src/styles/global.css`.
-
----
-
 ## Folder Structure
 
 ```
@@ -62,9 +39,9 @@ portfolio/
 │   │   ├── AboutMe/
 │   │   │   ├── AboutMe.jsx
 │   │   │   └── AboutMe.module.css
-│   │   ├── Expertise/
-│   │   │   ├── Expertise.jsx
-│   │   │   └── Expertise.module.css
+│   │   ├── SKills/
+│   │   │   ├── Skills.jsx
+│   │   │   └── Skills.module.css
 │   │   ├── Projects/
 │   │   │   ├── Projects.jsx
 │   │   │   └── Projects.module.css
@@ -97,7 +74,7 @@ App.jsx
 ├── Navbar.jsx          → NavLinks, HamburgerBtn
 ├── Home.jsx            → HeroTitle, HeroActions
 ├── AboutMe.jsx         → StatusBadge, SectionTitle (reusable), Bio, TechTags, ToolsList
-├── Expertise.jsx       → SectionTitle, SkillCard
+├── SKills.jsx       → SectionTitle, SkillCard
 ├── Projects.jsx        → SectionTitle, ProjectGrid, ProjectCard
 ├── Contact.jsx         → SectionTitle, SocialLinks
 └── Footer.jsx          → ScrollToTop
