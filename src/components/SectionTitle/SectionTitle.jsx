@@ -1,7 +1,7 @@
 import styles from './SectionTitle.module.css'
 
-function SectionTitle({children}) {
-    return <h2 className={styles.title}>{children}</h2>
+function SectionTitle({children, accent}) {
+    return <h2 className={`${styles.title} ${accent ? styles.style: ''}`}>{children}</h2>
 }
 
 export default SectionTitle
