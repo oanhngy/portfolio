@@ -1,0 +1,109 @@
+.section {
+    /* position: relative; */
+    padding: var(--section-padding);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.gridContainer {
+    margin-top: var(--space-xl);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l);
+    grid-auto-rows: auto auto auto;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    background-color: var(--bg-card);
+    gap: var(--space-l);
+    
+    /* effect */
+    overflow: hidden;
+    border: 1.5px solid var(--bg);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 6px var(--accent);
+}
+
+.img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.title {
+    padding: 0 var(--space-base);
+    align-self: start;
+}
+
+.cardBottom {
+    position: relative;
+    display: grid;
+    padding: 0 var(--space-base) var(--space-base);
+    min-height: 60px;
+}
+
+.showProject {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.showProject span {
+    padding: var(--space-base);
+    color: var(--accent);
+}
+
+.card:hover .showProject {
+    opacity: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-base);
+    align-self: start;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .tags {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.tag {
+    text-align: center;
+    padding: var(--space-m) var(--space-l);
+    border: 1px solid var(--text-shade);
+    border-radius: 100px;
+    color: var(--text-shade);
+    font-weight: var(--fw-medium);
+    white-space: nowrap;
+}
+
+
+/* 1440, 1110, 430 */
+@media (max-width: 1185px) {
+
+}
+
+@media (max-width: 900px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .section {
+        max-width: 90%;
+    }
+}
