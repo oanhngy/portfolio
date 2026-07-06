@@ -5,7 +5,7 @@ import styles from './Projects.module.css'
 function Projects() {
     return (
         <section id="projects" className={styles.section}>
-            <SectionTitle style>My Projects</SectionTitle>
+            <SectionTitle accent>My Projects</SectionTitle>
             <div className={styles.gridContainer}>
                 {projects.map(project => (
                     <a
