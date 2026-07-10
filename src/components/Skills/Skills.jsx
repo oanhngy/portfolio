@@ -1,12 +1,15 @@
 import skills from '../../data/skills'
+import useOnScreen from '../../hooks/useOnScreen'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import styles from './Skills.module.css'
 
 function Skills() {
+    const [ref, isVisible]= useOnScreen()
+
     return (
-        <section id="skills" className={styles.section}>
-            <SectionTitle accent>My Skills</SectionTitle>
-            <div className={styles.gridContainer}>
+        <section ref={ref} id="skills" className={styles.section}>
+            <SectionTitle accent animate visible={isVisible}>My Skills</SectionTitle>
+            <div className={`${styles.gridContainer} ${isVisible ? styles.visible : ''}`}>
                 {skills.map(skill => (
                     <div key={skill.id} className={styles.card}>
                         <div className={styles.cardHeader}>

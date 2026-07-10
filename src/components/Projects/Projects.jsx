@@ -1,12 +1,15 @@
 import projects from '../../data/projects'
+import useOnScreen from '../../hooks/useOnScreen'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import styles from './Projects.module.css'
 
 function Projects() {
+    const [ref, isVisible]= useOnScreen()
+
     return (
-        <section id="projects" className={styles.section}>
-            <SectionTitle accent>My Projects</SectionTitle>
-            <div className={styles.gridContainer}>
+        <section ref={ref} id="projects" className={styles.section}>
+            <SectionTitle accent animate visible={isVisible}>My Projects</SectionTitle>
+            <div className={`${styles.gridContainer} ${isVisible ? styles.visible : ''}`}>
                 {projects.map(project => (
                     <a
                         key={project.id}

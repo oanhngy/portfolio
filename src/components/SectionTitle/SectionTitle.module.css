@@ -4,6 +4,23 @@
     color: var(--text);
 }
 
+.animate {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* useOnScreen */
+/* .title.visible {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
 .style {
     color: var(--accent);
     text-align: center;
