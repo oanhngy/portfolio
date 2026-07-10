@@ -39,6 +39,10 @@
     color: var(--accent-shade);
 }
 
+.navLinks a.active {
+    color: var(--accent-shade);
+}
+
 .hamburger {
     display: none;
     font-size: var(--fs-xl);
