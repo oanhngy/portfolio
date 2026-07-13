@@ -133,7 +133,7 @@
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 700px) {
     .container {
         max-width: 90%;
         flex-direction: column;
