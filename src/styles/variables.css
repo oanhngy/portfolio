@@ -29,6 +29,7 @@
     --fs-3xl: 56px;
     --fs-4xl: 72px;
     /* 2.3 font weight */
+    --fw-thin: 300;
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;

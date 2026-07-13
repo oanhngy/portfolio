@@ -30,21 +30,41 @@
 }
 
 .navLinks a {
+    position: relative;
     font-size: var(--fs-l);
-    color: var(--text);
+    color: var(--text-shade);
+    font-weight: var(--fw-thin);
     transition: color 0.2s;
+    white-space: nowrap;
 }
 
 .navLinks a:hover {
-    color: var(--accent-shade);
+    color: var(--text);
+    font-weight: var(--fw-semibold);
 }
 
 .navLinks a.active {
-    color: var(--accent-shade);
+    color: var(--text);
+    font-weight: var(--fw-semibold);
+}
+
+/* gạch chân ảo */
+.navLinks a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+    border-radius: 2px;
 }
 
 .hamburger {
     display: none;
+    position: relative;
+    z-index: 101;
     font-size: var(--fs-xl);
     color: var(--text);
     cursor: pointer;
@@ -53,23 +73,35 @@
 /* breakpoint */
 @media (max-width: 1024px) {
     .navLinks {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 0vw;
+        height: 100vh;
+        padding: var(--space-3xl) 0 var(--space-2xl) 0;
+        gap: var(--space-l);
+        background: linear-gradient(
+            110deg,
+            var(--bg),
+            var(--bg-gradient)
+        );
+        z-index: 100;
+        overflow: hidden;
+        transition: width 0.4s ease, padding 0.4s ease;
     }
 
     .navLinksOpen {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 64px;
-        right: 24px;
-        padding: 0px var(--space-base);
-        gap: var(--space-m);
-        /* border: 1px solid var(--border); */
-        min-width: 140px;
+        width: 34vw;
+        padding: var(--space-3xl) var(--space-2xl) var(--space-2xl);
     }
 
     .hamburger {
         display: block;
+        position: relative;
+        z-index: 101;
     }
 }
 
