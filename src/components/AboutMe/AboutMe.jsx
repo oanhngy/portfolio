@@ -6,10 +6,13 @@ import styles from './AboutMe.module.css'
 
 function AboutMe() {
     const [typedIntro, setTypedIntro]= useState('')
-    const [sectionRef, isVisible]= useOnScreen({threshold: 0.4}) //1. gọi hook useOnScreen
+    // const [sectionRef, isVisible]= useOnScreen({threshold: 0.4}) //1. gọi hook useOnScreen
+    const [leftRef, leftVisible]= useOnScreen()
+    const [rightRef, rightVisible]= useOnScreen()
+    const [tagsRef, tagsVisible]= useOnScreen()
 
     useEffect(() => {
-        if(!isVisible) return //3.1 chưa tới -> k chạy effect
+        if(!leftVisible) return //3.1 chưa tới -> k chạy effect
         let i=0
         const intervalId=setInterval(() => {
             i++
@@ -21,13 +24,13 @@ function AboutMe() {
         }, 60)
 
         return () => clearInterval(intervalId)
-    }, [isVisible]) //3.2 đổi dependency
+    }, [leftVisible]) //3.2 đổi dependency
 
     return (
-        <section id="about" ref={sectionRef} className={styles.section}> {/* 2. thêm ref={sectionRef} */}
+        <section id="about" className={styles.section}> {/* 2. thêm ref={sectionRef} */}
             {/* 2 cols */}
             <div className={styles.container}>
-                <div className={styles.left}>
+                <div ref={leftRef} className={`${styles.left} ${leftVisible ? styles.visible : ''}`}>
                     <span className={styles.badge}>{about.statusBadge}</span>
                     <SectionTitle>
                         Hi, this is <span className={styles.accent}>Oanh.</span>
@@ -35,13 +38,13 @@ function AboutMe() {
                     <p  className={styles.intro}>{typedIntro}</p>
                 </div>
 
-                <div className={styles.right}>
+                <div ref={rightRef} className={`${styles.right} ${rightVisible ? styles.visible : ''}`}>
                     <p className={styles.bio}>{about.bio}</p>
                 </div>
             </div>
 
             {/* techtags */}
-            <ul className={styles.tags}>
+            <ul ref={tagsRef} className={`${styles.tags} ${tagsVisible ? styles.visible : ''}`}>
                 {about.tools.map(tool => (
                     <li key={tool.skill} className={styles.tag}>
                         {tool.skill}
