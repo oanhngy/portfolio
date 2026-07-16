@@ -2,7 +2,7 @@ const about = {
     //hero/home
     name: "oanh nguyen",
     title: "software developer",
-    cvUrl: "/CV_sample.pdf",
+    cvUrl: import.meta.env.BASE_URL + "CV_sample.pdf",
 
     // contact
     email: "oanhnguyen.ohn@outlook.com",
